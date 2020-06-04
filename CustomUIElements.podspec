@@ -35,7 +35,7 @@ Pod::Spec.new do |spec|
 
   spec.author             = { "vsricci" => "vinicius.ricci4@gmail.com" }
 
-  spec.source       = { :git => "https://github.com/vsricci/CustomUIElements.git", :tag => "{spec.version}" }
+  spec.source       = { :git => "https://github.com/vsricci/CustomUIElements.git", :tag => "#{spec.version}" }
 
   spec.exclude_files = "Classes/Exclude"
 
