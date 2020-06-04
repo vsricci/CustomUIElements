@@ -6,10 +6,25 @@
 	objectVersion = 50;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		3199A107248207F900D4741B /* CustomUIElementsUniversal */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 3199A108248207F900D4741B /* Build configuration list for PBXAggregateTarget "CustomUIElementsUniversal" */;
+			buildPhases = (
+				3199A10B2482081500D4741B /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = CustomUIElementsUniversal;
+			productName = CustomUIElementsUniversal;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		3199A0F4248201EE00D4741B /* CustomUIElements.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3199A0EA248201EE00D4741B /* CustomUIElements.framework */; };
 		3199A0F9248201EE00D4741B /* CustomUIElementsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3199A0F8248201EE00D4741B /* CustomUIElementsTests.swift */; };
 		3199A0FB248201EE00D4741B /* CustomUIElements.h in Headers */ = {isa = PBXBuildFile; fileRef = 3199A0ED248201EE00D4741B /* CustomUIElements.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3199A1062482021700D4741B /* TypeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3199A1052482021700D4741B /* TypeColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +44,7 @@
 		3199A0F3248201EE00D4741B /* CustomUIElementsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomUIElementsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3199A0F8248201EE00D4741B /* CustomUIElementsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUIElementsTests.swift; sourceTree = "<group>"; };
 		3199A0FA248201EE00D4741B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3199A1052482021700D4741B /* TypeColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +87,7 @@
 		3199A0EC248201EE00D4741B /* CustomUIElements */ = {
 			isa = PBXGroup;
 			children = (
+				3199A104248201F900D4741B /* Colors */,
 				3199A0ED248201EE00D4741B /* CustomUIElements.h */,
 				3199A0EE248201EE00D4741B /* Info.plist */,
 			);
@@ -84,6 +101,14 @@
 				3199A0FA248201EE00D4741B /* Info.plist */,
 			);
 			path = CustomUIElementsTests;
+			sourceTree = "<group>";
+		};
+		3199A104248201F900D4741B /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				3199A1052482021700D4741B /* TypeColor.swift */,
+			);
+			path = Colors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,8 +173,12 @@
 				TargetAttributes = {
 					3199A0E9248201EE00D4741B = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
 					};
 					3199A0F2248201EE00D4741B = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					3199A107248207F900D4741B = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
 				};
@@ -169,6 +198,7 @@
 			targets = (
 				3199A0E9248201EE00D4741B /* CustomUIElements */,
 				3199A0F2248201EE00D4741B /* CustomUIElementsTests */,
+				3199A107248207F900D4741B /* CustomUIElementsUniversal */,
 			);
 		};
 /* End PBXProject section */
@@ -190,11 +220,32 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3199A10B2482081500D4741B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#Gera o framework para devices\nxcodebuild archive -scheme ${PROJECT_NAME} -archivePath \"${PROJECT_DIR}/build/${PROJECT_NAME}-iphoneos.xcarchive\" -sdk iphoneos SKIP_INSTALL=NO BUILD_LIBRARIES_FOR_DISTRIBUTION=YES\n\n#Gera o framework para simuladores\nxcodebuild archive -scheme ${PROJECT_NAME} -archivePath \"${PROJECT_DIR}/build/${PROJECT_NAME}-iossimulator.xcarchive\" -sdk iphonesimulator SKIP_INSTALL=NO BUILD_LIBRARIES_FOR_DISTRIBUTION=YES\n\n#Gera o xcframework para as duas arquiteturas\nxcodebuild -create-xcframework -framework \"${PROJECT_DIR}/build/${PROJECT_NAME}-iphoneos.xcarchive/Products/Library/Frameworks/${PROJECT_NAME}.framework\" -framework \"${PROJECT_DIR}/build/${PROJECT_NAME}-iossimulator.xcarchive/Products/Library/Frameworks/${PROJECT_NAME}.framework\" -output \"${PROJECT_DIR}/build/${PROJECT_NAME}.xcframework\"\n\n#Abre a pasta onde o xcframework foi gerado\nopen \"${PROJECT_DIR}/build\"\n\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3199A0E6248201EE00D4741B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3199A1062482021700D4741B /* TypeColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +319,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -325,7 +376,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -340,6 +391,8 @@
 		3199A0FF248201EE00D4741B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 889286V7CX;
@@ -353,9 +406,11 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = vsricci.com.CustomUIElements;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -364,6 +419,8 @@
 		3199A100248201EE00D4741B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 889286V7CX;
@@ -388,6 +445,7 @@
 		3199A102248201EE00D4741B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 889286V7CX;
 				INFOPLIST_FILE = CustomUIElementsTests/Info.plist;
@@ -406,6 +464,7 @@
 		3199A103248201EE00D4741B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 889286V7CX;
 				INFOPLIST_FILE = CustomUIElementsTests/Info.plist;
@@ -418,6 +477,29 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3199A109248207F900D4741B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 889286V7CX;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = NO;
+			};
+			name = Debug;
+		};
+		3199A10A248207F900D4741B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 889286V7CX;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = NO;
 			};
 			name = Release;
 		};
@@ -447,6 +529,15 @@
 			buildConfigurations = (
 				3199A102248201EE00D4741B /* Debug */,
 				3199A103248201EE00D4741B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3199A108248207F900D4741B /* Build configuration list for PBXAggregateTarget "CustomUIElementsUniversal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3199A109248207F900D4741B /* Debug */,
+				3199A10A248207F900D4741B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

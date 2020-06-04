@@ -1,0 +1,22 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.1.3 (swiftlang-1100.0.282.1 clang-1100.0.33.15)
+// swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name CustomUIElements
+@_exported import CustomUIElements
+import Swift
+import UIKit
+extension UIColor {
+  public func getTypeColor(_ typeColor: CustomUIElements.TypeColor) -> UIKit.UIColor
+}
+public enum TypeColor : Swift.String {
+  case first
+  case second
+  case login
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension CustomUIElements.TypeColor : Swift.Equatable {}
+extension CustomUIElements.TypeColor : Swift.Hashable {}
+extension CustomUIElements.TypeColor : Swift.RawRepresentable {}
