@@ -391,7 +391,7 @@
 		3199A0FF248201EE00D4741B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -419,7 +419,7 @@
 		3199A100248201EE00D4741B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -483,7 +483,7 @@
 		3199A109248207F900D4741B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 889286V7CX;
 				ONLY_ACTIVE_ARCH = NO;
@@ -495,7 +495,7 @@
 		3199A10A248207F900D4741B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 889286V7CX;
 				PRODUCT_NAME = "$(TARGET_NAME)";
