@@ -39,6 +39,6 @@ Pod::Spec.new do |spec|
 
   spec.exclude_files = "Classes/Exclude"
 
-  spec.vendored_frameworks = 'build/CustomUIElements.xcframework'
+  spec.vendored_frameworks = 'CustomUIElements/build/CustomUIElements.xcframework'
 
 end
