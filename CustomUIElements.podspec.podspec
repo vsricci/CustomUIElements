@@ -7,7 +7,7 @@ Pod::Spec.new do |spec|
   spec.platform     = :ios
   spec.requires_arc = true
   spec.swift_version = "5.0"
-  spec.homepage     = "https://github.com/vsricci/PodsSpecs"
+  spec.homepage     = "https://github.com/vsricci/CustomUIElements"
 
   spec.license      = {
     :type => 'Copyright',
@@ -33,9 +33,9 @@ Pod::Spec.new do |spec|
     }
 
 
-  spec.author             = { "Vinicius Santos Ricci" => "vinicius.ricci4@gmail.com" }
+  spec.author             = { "vsricci" => "vinicius.ricci4@gmail.com" }
 
-  spec.source       = { :git => "https://github.com/vsricci/PodsSpecs.git", :tag => "{spec.version}" }
+  spec.source       = { :git => "https://github.com/vsricci/CustomUIElements.git", :tag => "{spec.version}" }
 
   spec.exclude_files = "Classes/Exclude"
 
