@@ -37,7 +37,7 @@ Pod::Spec.new do |spec|
 
   spec.source       = { :git => "https://github.com/vsricci/CustomUIElements.git", :tag => "#{spec.version}" }
 
-  spec.exclude_files = "Classes/Exclude"
+  #spec.exclude_files = "Classes/Exclude"
 
   spec.vendored_frameworks = 'build/CustomUIElements.xcframework'
 
