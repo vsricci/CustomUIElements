@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/CustomUIElements-Swift.h</key>
 		<data>
-		+8ejNvepWWOEqUOUhM5ib2HwACU=
+		rpeUdMVIyFg2Ovj6k7QBDlzXVwU=
 		</data>
 		<key>Headers/CustomUIElements.h</key>
 		<data>
@@ -16,17 +16,37 @@
 		<data>
 		7j1z0ksEE/J/ft0v/6zgiJYANzI=
 		</data>
+		<key>Main.storyboardc/5TA-Yn-YKn-view-gb4-hC-kSy.nib/objects-13.0+.nib</key>
+		<data>
+		s0P1jEuqYhvmcL6mI/d1MuU5y4k=
+		</data>
+		<key>Main.storyboardc/5TA-Yn-YKn-view-gb4-hC-kSy.nib/runtime.nib</key>
+		<data>
+		VzXq3zsMJRW62PXnuEdn8GuXkW8=
+		</data>
+		<key>Main.storyboardc/Info.plist</key>
+		<data>
+		y+EmAeRFr+9AN+QhrUiFGcqoQHM=
+		</data>
+		<key>Main.storyboardc/TESTViewController.nib/objects-13.0+.nib</key>
+		<data>
+		K8i/pZFsI4IThyWTbr4N14VLLi4=
+		</data>
+		<key>Main.storyboardc/TESTViewController.nib/runtime.nib</key>
+		<data>
+		HHUiNNLa9sktQySnEwaOv2Kdg+o=
+		</data>
 		<key>Modules/CustomUIElements.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
 		qjb/LVq6jayhgPwnT+GfnIiNviU=
 		</data>
 		<key>Modules/CustomUIElements.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		6tdLElrKwGk6JMS8vMy4/nm61hM=
+		wdjZzjMpk2FlXpYtjHgUq4P6QJk=
 		</data>
 		<key>Modules/CustomUIElements.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		k5O5QoSBDUcVLlf+BIAXpCH0i/M=
+		MIpU7jJjPVajZqNDin6F8E/4Btw=
 		</data>
 		<key>Modules/CustomUIElements.swiftmodule/x86_64.swiftdoc</key>
 		<data>
@@ -34,11 +54,11 @@
 		</data>
 		<key>Modules/CustomUIElements.swiftmodule/x86_64.swiftinterface</key>
 		<data>
-		6tdLElrKwGk6JMS8vMy4/nm61hM=
+		wdjZzjMpk2FlXpYtjHgUq4P6QJk=
 		</data>
 		<key>Modules/CustomUIElements.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		k5O5QoSBDUcVLlf+BIAXpCH0i/M=
+		MIpU7jJjPVajZqNDin6F8E/4Btw=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -51,7 +71,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			3DcdULXrnsEkZeJfd1z1hQfZ2/O2NccFiunllawl9Kw=
+			l0Sjh5/c4mhZ7LYD5nC17p2nKyDVTtbJrq5euHO8rx8=
 			</data>
 		</dict>
 		<key>Headers/CustomUIElements.h</key>
@@ -59,6 +79,41 @@
 			<key>hash2</key>
 			<data>
 			DNjnRo9jxtOVKJQMKQz3VRNgSdpsH4H983VsTxwgsdQ=
+			</data>
+		</dict>
+		<key>Main.storyboardc/5TA-Yn-YKn-view-gb4-hC-kSy.nib/objects-13.0+.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			dSfY3hUKcRr7OszSxQpaj13ZALNEGeFdZMz33zH0Bko=
+			</data>
+		</dict>
+		<key>Main.storyboardc/5TA-Yn-YKn-view-gb4-hC-kSy.nib/runtime.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			4EcFsF+6GqiKWsQdGiBKdQFs2jWiwV9ZWQHhp3ToDmA=
+			</data>
+		</dict>
+		<key>Main.storyboardc/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			WWoYMqnZaN307XfIBmEZrz11hgYFbQNivgyi9f14deA=
+			</data>
+		</dict>
+		<key>Main.storyboardc/TESTViewController.nib/objects-13.0+.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Fi96VTSw48JfL/UOpjQGjCaqhoVyXjPV/KC46D4dqvs=
+			</data>
+		</dict>
+		<key>Main.storyboardc/TESTViewController.nib/runtime.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Onu/bxjFRZ9J0/G5JaHNu5flv7tlkmIYZNX9k9IS568=
 			</data>
 		</dict>
 		<key>Modules/CustomUIElements.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -72,14 +127,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			6qBnnZdv6P3AckhPkRJM8fjQ2OJyPQIiBukrq+W8n3s=
+			B7qGdsh+kA4MnmNcbD5DlntAt/J6awOoJOOhDqU3hmg=
 			</data>
 		</dict>
 		<key>Modules/CustomUIElements.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			tUwfChtW6loZc5OAnDxyIY7KZuO9xaM5Q/XShGWXcQk=
+			ntpjLRx4+KLckdWukqU5sukTgWBIwiq7MmCoVk+Gzgc=
 			</data>
 		</dict>
 		<key>Modules/CustomUIElements.swiftmodule/x86_64.swiftdoc</key>
@@ -93,14 +148,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			6qBnnZdv6P3AckhPkRJM8fjQ2OJyPQIiBukrq+W8n3s=
+			B7qGdsh+kA4MnmNcbD5DlntAt/J6awOoJOOhDqU3hmg=
 			</data>
 		</dict>
 		<key>Modules/CustomUIElements.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			tUwfChtW6loZc5OAnDxyIY7KZuO9xaM5Q/XShGWXcQk=
+			ntpjLRx4+KLckdWukqU5sukTgWBIwiq7MmCoVk+Gzgc=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

@@ -17,6 +17,30 @@ public enum TypeColor : Swift.String {
     get
   }
 }
+@objc public class TESTViewController : UIKit.UIViewController {
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+public protocol Coordinator {
+  func start()
+}
+@objc public class MainCoordinator : ObjectiveC.NSObject, CustomUIElements.Coordinator {
+  public init(navigationController: UIKit.UINavigationController)
+  public var rootViewController: UIKit.UIViewController {
+    get
+  }
+  public func start()
+  @objc override dynamic public init()
+  @objc deinit
+}
+public class Manager {
+  public static let shared: CustomUIElements.Manager
+  public func flowOne(navi: UIKit.UINavigationController)
+  @objc deinit
+}
 extension CustomUIElements.TypeColor : Swift.Equatable {}
 extension CustomUIElements.TypeColor : Swift.Hashable {}
 extension CustomUIElements.TypeColor : Swift.RawRepresentable {}
