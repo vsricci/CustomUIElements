@@ -2,7 +2,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "CustomUIElements"
-  spec.version      = "0.0.1"
+  spec.version      = "0.0.3"
   spec.summary      = "A short description of CustomUIElements.podspec."
   spec.platform     = :ios
   spec.requires_arc = true
@@ -39,6 +39,6 @@ Pod::Spec.new do |spec|
 
   #spec.exclude_files = "Classes/Exclude"
 
-  spec.vendored_frameworks = 'build/CustomUIElements.xcframework'
+  spec.vendored_frameworks = 'CustomUIElements.xcframework'
 
 end
